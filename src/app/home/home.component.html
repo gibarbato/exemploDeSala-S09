@@ -1,3 +1,22 @@
-<p>home works!</p>
+<div class="home">
 
-<app-card></app-card>
+    <div class="pesquisar">
+      <input type="text" [(ngModel)]="textoPesquisa">
+      <button (click)="pesquisar()">Pesquisar</button>
+    </div>
+  
+    <div class="lista-cards">
+      <div *ngFor="let produto of listaProdutosFiltro">
+        <app-card [item]="produto"></app-card>
+      </div>
+    </div>
+  
+  </div>
+
+
+
+<!-- <span> OU </span>
+
+<div >
+    <app-card *ngFor="let produto of listaProdutos" [item]="produto"></app-card>
+</div> -->
